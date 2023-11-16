@@ -2,9 +2,14 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 var currentDayEl = document.querySelector("#currentDay");
-var currentDay = new Date().toLocaleDateString("en-US", {month: "long", day: "numeric", year: "numeric"})
-console.log(currentDay);
+var currentDay = new Date().toLocaleDateString("en-US", {month: "long", day: "numeric", year: "numeric"});
 currentDayEl.textContent = currentDay
+
+var rowTemplate = document.querySelector("#row-template")
+var hoursArray = [9, 10, 11, 12, 13, 14, 15, 16, 17]
+  for (let i = 0; i < hoursArray.length; i++) {
+    const thisHour = hoursArray[i];
+  }
 
 // November 16th, 2023
   // TODO: Add a listener for click events on the save button. This code should
