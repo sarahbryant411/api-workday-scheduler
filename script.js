@@ -58,6 +58,9 @@ function getClass(thisHour) {
 
 function saveText(i) {
   console.log(textAreas[i].value)
+  hoursArray[i]
+
+  localStorage.setItem(hoursArray[i], textAreas[i].value)
 }
 // November 16th, 2023
 // TODO: Add a listener for click events on the save button. This code should
