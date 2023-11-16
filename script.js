@@ -15,6 +15,7 @@ for (let i = 0; i < hoursArray.length; i++) {
   var rowClone = rowTemplate.cloneNode(true).content;
   rowClone.querySelector(".hour").textContent = getTimeStamp(thisHour)
   rowClone.querySelector("textarea").classList.add(getClass(thisHour))
+  rowClone.querySelector("textarea").value = localStorage.getItem(thisHour);
   rowClone.querySelector("button").addEventListener("click", () => {saveText(i)}
   )
   rowContainer.append(rowClone)
@@ -55,11 +56,7 @@ function getClass(thisHour) {
 }
 
 
-
 function saveText(i) {
-  console.log(textAreas[i].value)
-  hoursArray[i]
-
   localStorage.setItem(hoursArray[i], textAreas[i].value)
 }
 // November 16th, 2023
