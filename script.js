@@ -2,8 +2,10 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 var currentDayEl = document.querySelector("#currentDay");
-var currentDay = new Date().toLocaleDateString("en-US", {month: "long", day: "2-digit", year: "numeric"})
+var currentDay = new Date().toLocaleDateString("en-US", {month: "long", day: "numeric", year: "numeric"})
 console.log(currentDay);
+currentDayEl.textContent = currentDay
+
 // November 16th, 2023
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
